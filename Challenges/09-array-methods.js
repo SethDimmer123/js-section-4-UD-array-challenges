@@ -137,10 +137,21 @@ console.log(averageScore); //when not returning the total we get undefined becau
 
 
 
-// SQUARE BRACKET NOTATION VID 84.
+// SQUARE BRACKET NOTATION VID 84. making properties DYNAMIC
 
+const subject = 'math'; // i can change this
 
+const total ={};
+total[subject] = 'some value';
+console.log(total);
 
+//not only do we have dot "." notation we also have square notation(line 145)
+// where we add dynamic properties
+
+// i am creating a new object by the name of total
+
+// instead of doing total.math i do total[subject]
+// it allows me to setup the subject value 'math dynamically
 
 
 
