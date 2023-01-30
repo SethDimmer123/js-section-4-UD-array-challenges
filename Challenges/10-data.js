@@ -30,3 +30,9 @@ const students = [
         favoriteSubject: 'math'
     },
 ]
+
+function sayName(name) {
+    console.log(name)
+}
+// this is the least likely case of structuring multiple files 
+// BUT IT IS GOOD TO KNOW
