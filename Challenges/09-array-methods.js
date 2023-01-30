@@ -84,7 +84,7 @@ const specificId = students.find(function(banana){
     return banana.id === 5;
 });
 
-console.log(specificId)
+// console.log(specificId)
 
 // we get back the specfic object in this case is because our items in data.js are objects
 
@@ -100,10 +100,56 @@ const random = fruits.find(function (fruit){
     return fruit === 'orange'
 }) 
 
-console.log(random)
+// console.log(random)
 
 // we use find to only look for 1 item we get back the object instead of the whole array 
 // which is ehat the filter method does.
+
+
+// REDUCE METHOD VID 83
+
+// ####  GET THE averageScore
+
+// 1. sum up all student.score values with reduce
+// 2. divide by the length of the students array
+// 3. assign to 'averageScore' and log
+
+// the FIRST PARAMETER REFERENCES WHAT WE ARE RETURNING (scoresTotal)
+
+// the SECOND PARAMETER REFERENCES THE INDIVIDUAL ITEM
+
+const averageScore = students.reduce(function
+    (scoresTotal, student) { // the second PARAMETER REFERENCES EACH AND EVERY ITEM WE HAVE IN THE ARRAY (3:07)
+        // console.log(student);
+        // console.log(scoresTotal);
+        return scoresTotal + student.score; // with each iteration we keep adding then we divide by the length 
+    },0) / students.length//in this case we start with a number
+// whatever is behind the comma is the default value it can be a number,object,or array
+
+console.log(averageScore); //when not returning the total we get undefined because
+// because we start iterating from 0 and from the function there is no return
+
+
+// WHEN USING REDUCE METHOD always RETURN THE FIRST ARGUEMENT WHICH IN THIS CASE IS scoresTotal
+
+
+
+
+
+
+// SQUARE BRACKET NOTATION VID 84.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
