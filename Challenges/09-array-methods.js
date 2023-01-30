@@ -32,6 +32,13 @@ const updatedStudents = students.map(function (student) { // i can call the para
 
 
 
+
+
+
+
+
+
+
 // FILTER METHOD
 
 /* #### highScores VID 80.
@@ -61,6 +68,16 @@ const highScores = students.filter(function (student) { // 1. we are iterating o
 // });
 
 // console.log(highScores)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -106,6 +123,15 @@ const random = fruits.find(function (fruit){
 // which is ehat the filter method does.
 
 
+
+
+
+
+
+
+
+
+
 // REDUCE METHOD VID 83
 
 // ####  GET THE averageScore
@@ -126,11 +152,21 @@ const averageScore = students.reduce(function
     },0) / students.length//in this case we start with a number
 // whatever is behind the comma is the default value it can be a number,object,or array
 
-console.log(averageScore); //when not returning the total we get undefined because
+// console.log(averageScore);
+
+//when not returning the total we get undefined because
 // because we start iterating from 0 and from the function there is no return
 
 
 // WHEN USING REDUCE METHOD always RETURN THE FIRST ARGUEMENT WHICH IN THIS CASE IS scoresTotal
+
+
+
+
+
+
+
+
 
 
 
@@ -143,7 +179,7 @@ const subject = 'math'; // i can change this
 
 const total ={};
 total[subject] = 'some value';
-console.log(total);
+// console.log(total);
 
 //not only do we have dot "." notation we also have square notation(line 145)
 // where we add dynamic properties
@@ -151,7 +187,52 @@ console.log(total);
 // i am creating a new object by the name of total
 
 // instead of doing total.math i do total[subject]
-// it allows me to setup the subject value 'math dynamically
+// it allows me to setup the subject value 'math dynamically.
+
+
+
+
+
+
+
+
+// REDUCE METHOD #2 VID 85
+
+// this more complex this be covered more detail later on
+
+// #### survey
+
+// 1. list favorite subjects with reduce
+//    {
+//    english: 1
+//    history: 1
+//    math: 3
+//    }
+// 2. assign to survey and log
+
+
+
+const survey = students.reduce(function(survey,student){
+    // console.log(student.favoriteSubject);
+    const favSubject = student.favoriteSubject;
+    if(survey[favSubject]){
+        survey[favSubject] === survey[favSubject] + 1
+    }
+    else{
+        survey[favSubject] = 1;
+}
+    survey[favSubject] = 1;
+    return survey;
+},{})
+
+// console.log(survey);
+
+
+
+
+
+
+
 
 
 
