@@ -10,7 +10,7 @@ const updatedStudents = students.map(function (student) { // i can call the para
 });
 console.log(updatedStudents);
 
-// this how you add a role of "student" to the array
+// this how you add a role of "student" to an array
 
 
 
